@@ -64,6 +64,7 @@ nav a {
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .hero img {
@@ -108,6 +109,47 @@ nav a {
 .price {
   color: #CFAE70;
   font-weight: bold;
+}
+
+.buy-btn {
+  margin-top: 10px;
+  background: #CFAE70;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* PAYMENT MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.payment-option {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.payment-option:hover {
+  background: #FFF8F3;
 }
 
 .features {
@@ -174,22 +216,41 @@ footer a {
       <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
       <h3>DIY Name Pendant Kit</h3>
       <p class="price">₹1,499</p>
+      <div class="buy-btn" onclick="openPayment('DIY Name Pendant Kit',1499)">Buy Now</div>
     </div>
 
     <div class="product">
       <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
       <h3>Couple Rings Set</h3>
       <p class="price">₹1,199</p>
+      <div class="buy-btn" onclick="openPayment('Couple Rings Set',1199)">Buy Now</div>
     </div>
 
     <div class="product">
       <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab5">
       <h3>Friendship Bracelet Kit</h3>
       <p class="price">₹999</p>
+      <div class="buy-btn" onclick="openPayment('Friendship Bracelet Kit',999)">Buy Now</div>
     </div>
 
   </div>
 </section>
+
+<!-- PAYMENT POPUP -->
+<div class="modal" id="paymentModal">
+  <div class="modal-box">
+    <h3 id="productName"></h3>
+    <p id="productPrice"></p>
+
+    <h4 style="margin-top:15px;">Select Payment Method</h4>
+
+    <div class="payment-option">UPI (Coming Soon)</div>
+    <div class="payment-option">Debit / Credit Card (Coming Soon)</div>
+    <div class="payment-option">Cash on Delivery (Demo)</div>
+
+    <button class="btn" style="margin-top:15px;" onclick="closePayment()">Close</button>
+  </div>
+</div>
 
 <section class="section">
   <h2>Why People Love Our Jewelry</h2>
@@ -227,6 +288,18 @@ footer a {
   <a href="#">Refund Policy</a>
   <a href="#">Made by Shashank Tiwari</a>
 </footer>
+
+<script>
+function openPayment(name, price) {
+  document.getElementById("productName").innerText = name;
+  document.getElementById("productPrice").innerText = "Price: ₹" + price;
+  document.getElementById("paymentModal").style.display = "flex";
+}
+
+function closePayment() {
+  document.getElementById("paymentModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
