@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diyora — DIY Jewelry Brand</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #FFF8F3;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 8%;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 48px;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.btn {
+  background: #CFAE70;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+.section {
+  padding: 60px 8%;
+}
+
+.section h2 {
+  text-align: center;
+  font-family: 'Playfair Display';
+  margin-bottom: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: #CFAE70;
+  font-weight: bold;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.story {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+footer {
+  background: white;
+  padding: 30px 8%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Diyora</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Create Jewelry That Tells Your Story 💖</h1>
+    <p>DIY Jewelry Kits • Personalized Gifts • Handmade Feel</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" />
+</section>
+
+<section class="section" id="shop">
+  <h2>Our Bestsellers</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f">
+      <h3>DIY Name Pendant Kit</h3>
+      <p class="price">₹1,499</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+      <h3>Couple Rings Set</h3>
+      <p class="price">₹1,199</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab5">
+      <h3>Friendship Bracelet Kit</h3>
+      <p class="price">₹999</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why People Love Our Jewelry</h2>
+
+  <div class="features">
+    <div class="feature">💍 Handpicked Designs</div>
+    <div class="feature">🎁 Perfect for Gifts</div>
+    <div class="feature">💖 Personalized DIY</div>
+    <div class="feature">🚚 Fast Delivery in India</div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>More Than Jewelry — It’s a Memory</h2>
+  <div class="story">
+    <p>
+      Diyora creates meaningful DIY jewelry designed for love, memories, and creativity.  
+      Every piece lets you express emotion and craft something truly personal.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <div class="story">
+    <p>Email: support@diyora.in</p>
+    <p>Instagram: @diyora</p>
+    <p>WhatsApp: +91XXXXXXXXXX</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Diyora — All Rights Reserved</p>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Refund Policy</a>
+</footer>
+
+</body>
+</html>
